@@ -1,9 +1,8 @@
-file=open("input.txt")
+file=open("day1.txt")
 c=list([])
 
 for line in file:
     c.append(int(line.strip()))
-    print(c)
 
 for i in range(len(c)):
     for j in range(i,len(c)):
