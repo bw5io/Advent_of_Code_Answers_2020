@@ -1,3 +1,6 @@
+import time
+now = time.time()
+
 def getRules(file):
     file=open("day7.txt")
     words=[]
@@ -39,3 +42,5 @@ lst=list(set(t))
 print(len(lst))
 print(rules)
 print(calBag("shiny gold",rules))
+
+print(time.time()-now)
