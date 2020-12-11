@@ -33,10 +33,10 @@ def goNuts(b,a):
             if c!=a[x][y]:
                 flag+=1
             b[x][y]=c
-            print(c,end='')
+            # print(c,end='')
         # print(a)
-        print("")
-    print(flag)
+        # print("")
+    # print(flag)
     if flag!=0:
         goNuts(a,b)
     return(flag)
@@ -55,8 +55,9 @@ seatsb=[]
 for line in file:
     seats+=[list(line.strip())]
     seatsb+=[list(line.strip())]
-for line in seats:
-    print (line)
+# for line in seats:
+    # print (line)
 count=goNuts(seats,seatsb)
 # print(seats,count)
 print(countSeats(seats))
+print(len(seats),len(seats[1]))
