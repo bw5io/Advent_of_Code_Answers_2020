@@ -1,4 +1,4 @@
-file=open("day13.txt")
+file=open("test.txt")
 now = file.readline()  #read timestamp from the file
 buses = file.readline() #read buses from the file
 buses = buses.strip().split(",")
