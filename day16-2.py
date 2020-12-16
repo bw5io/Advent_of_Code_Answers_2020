@@ -92,14 +92,23 @@ def cleanUp(inVar,cur):
         cleanUp(inVar,cur)
     return(inVar)
 
-def getMyTicket(inVar):
+def getMyTicket(inVar,outVar):
     for i in inVar:
         print (i)
         if "your" in i:
             continue
-        outVar=i.split(",")
-        print(outVar)
+        c=i.split(",")
+        for v in c:
+            outVar.append(v)
     return(outVar)
+
+def calSix(name,rule,tix):
+    sum=1
+    for i,j in enumerate(name):
+        print(i,j)
+        if "departure" in j[0]:
+            sum*=int(tix[i])
+    print(sum)
 
 inFile=[]
 inFileSplit=[]
@@ -111,6 +120,5 @@ getNearbyTicket(inFileSplit[2],nticket)
 isValid(nticket,rules)
 valid=isValid2(nticket,rules)
 cleanUp(valid,[])
-print(valid)
-outVar=getMyTicket(inFileSplit[1])
-print(ticket)
+getMyTicket(inFileSplit[1],ticket)
+calSix(valid,rules,ticket)
