@@ -7,13 +7,14 @@ def readFile(fileName,outVar):
     return None
 
 def plusZ(inVar):
-    blank = copy.deepcopy(["."])
-    inVar = copy.deepcopy(blank) + copy.deepcopy(inVar) + copy.deepcopy(blank)
+    inVar = ["."] + copy.deepcopy(inVar) + ["."]
     return inVar
 
-def plusY(inVar, len):
-    blank = [copy.deepcopy(["."]) * len]
-    inVar = copy.deepcopy(blank) + copy.deepcopy(inVar) + copy.deepcopy(blank)
+def plusY(inVar, leng):
+    d=[]
+    for i in range(leng):
+        d.append(".")
+    inVar = [copy.deepcopy(d)] + copy.deepcopy(inVar) + [copy.deepcopy(d)]
     return inVar
 
 def plusX(inVar,lenY,lenZ):
@@ -67,7 +68,7 @@ def printer(inVar):
 
 
 threed_space=[[]]
-readFile("test.txt",threed_space[0])
+readFile("day17.txt",threed_space[0])
 printer(threed_space)
 for times in range(6):
     print(times)
